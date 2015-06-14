@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/ant.jar"/>
+	<classpathentry kind="lib" path="lib/java-git.jar"/>
+	<classpathentry kind="lib" path="lib/jaxen.jar"/>
+	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/joda-time-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/jsch-0.1.50.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.core.resources_3.8.1.v20120802-154922.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.egit_3.0.1.201307141637-r.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.jgit-3.0.0.201306101825-r.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.resources.jar"/>
+	<classpathentry kind="lib" path="lib/saxpath.jar"/>
+	<classpathentry kind="lib" path="lib/substance.jar"/>
+	<classpathentry kind="lib" path="lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="lib/svnkit-1.7.6/antlr-runtime-3.4.jar"/>
+	<classpathentry kind="lib" path="lib/svnkit-1.7.6/sequence-library-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/svnkit-1.7.6/sqljet-1.1.5.jar"/>
+	<classpathentry kind="lib" path="lib/svnkit-Dependencies/antlr-runtime-3.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/svnkit-Dependencies/sqljet-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/svnkit-1.7.6/svnkit-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/enhancements-Dependencies/commons-io-2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/enhancements-Dependencies/commons-io-2.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/enhancements-Dependencies/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/enhancements-Dependencies/IdentifierFilter.jar"/>
+	<classpathentry kind="lib" path="lib/enhancements-Dependencies/ReadFile.jar"/>
+	<classpathentry kind="lib" path="swing2swt.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

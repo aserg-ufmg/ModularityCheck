@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/Modularity_1.0.0.qualifier.jar" id="Modularity" version="1.0.0.qualifier">
+      <category name="modularity.feature"/>
+   </feature>
+   <category-def name="modularity.feature" label="Modularity"/>
+</site>
