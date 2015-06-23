@@ -18,23 +18,21 @@ import br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.data.clustering.ch
 import br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.processing.data.clustering.chameleon.CoChangeGraph;
 import br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.properties.util.Properties;
 import br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.properties.util.Utils;
-import ptstemmer.exceptions.PTStemmerException;
-import br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.vocabulary.extraction.VocabularyExtractionPAM;
 
 public class Enhancement {
 
 	public static String NUMBER;
 	public static String line;
-
+	
 
 	/**
 	 * @param args
-	 *            args[0] -> raiz dos commits e issues do geronimo Ex:
-	 *            C:\Users\luciana\Dropbox\Testes\Geronimo args[1] -> diretório
-	 *            que contém as issues ex:
+	 *            args[0] -> root of commits and issues. For instance, Geronimo :
+	 *            C:\Users\luciana\Dropbox\Testes\Geronimo args[1] -> directory that contains the issue reports
+	 *            
 	 *            C:\Users\luciana\Dropbox\Testes\Geronimo\commentsTest
 	 * @param type
-	 *            tipo do repositório GIT ou SVN
+	 *            GIT or SVN
 	 */
 	public static boolean enhance(String[] args, int maxScattering,
 			int minClusterSize, int type) throws Exception {
@@ -43,7 +41,7 @@ public class Enhancement {
 			countPackagesCommits(args[0], type, maxScattering);
 			CoChangeGraph.retrieveGraph(args[0], type, false);
 			System.gc();
-			if(CoChangeGraph.getCountVertexes() > SClusterScript.MIN_SIZE_GRAPH){
+			if(CoChangeGraph.getCountVertexes() > SClusterScript.MIN_SIZE_GRAPH){ 
 				SClusterScript.runSCluster(args[1], CoChangeGraph.getCountVertexes(),
 					minClusterSize);
 
@@ -66,14 +64,14 @@ public class Enhancement {
 					+ Properties.SIZE_DATA);
 			System.gc();
 
-
+			
 			return true;
-
+			
 			}else reportGraphSize();
-
+			
 		} catch (Exception e) {
 			line = e.getMessage();
-
+			//throw new Exception(e);
 			Display.getDefault().syncExec(new Runnable() {
 				@Override
 				public void run() {
@@ -81,7 +79,7 @@ public class Enhancement {
 							.getActiveShell(), "Co-Change Graph", "There are not enough vertices to mine co-change clusters", SWT.OK);
 				}
 			});
-			return false;
+			return false;	
 		}
 		return false;
 	}
@@ -94,63 +92,81 @@ public class Enhancement {
 						.getActiveShell(), "Co-Change Graph", "There are not enough vertices to mine co-change clusters", SWT.OK);
 			}
 		});
-		return false;
+		return false;		
 	}
+
 
 
 	private static void countPackagesCommits(String root, int type,
 			int maxScattering) {
 		Properties.setDefaultPaths(root);
+		
+		System.out.println("Counting packages commits...");
+		
 		Properties.setFilesPath(Properties.FILES_COMMITS);
 		ArrayList<String> classes = new ArrayList<String>();
 		File[] listing = new File(Properties.getFilesPath()).listFiles();
 		Map<Integer, Integer> hash = new HashMap<Integer, Integer>();
 		ArrayList<File> delete = new ArrayList<File>();
-		String[] openCommit = null;
-		String name = null;
-
 		for (File commit : listing) {
 			try {
-				CarryFileMemory carry = new CarryFileMemory(commit.getAbsolutePath());
-				openCommit = carry.carryCompleteFile();
+				CarryFileMemory carry = new CarryFileMemory(
+						commit.getAbsolutePath());
+				String[] openCommit = carry.carryCompleteFile();
+
 				carry = null;
 				classes = new ArrayList<String>();
 
-				for (String line : openCommit) {
-					name = null;
+				for (String line : openCommit) {// reads the commit content
+					String name = null;
 
 					if (type == Parser.MANAGER_GIT) {
-						if (Utils.isValid(line)&& line.contains(Properties.TRUNK)) name = Utils.readPackage(line.split(Properties.TRUNK)[1]);
+						if (Utils.isValid(line)
+								&& line.contains(Properties.TRUNK)) {
+							name = Utils.readPackage(line
+									.split(Properties.TRUNK)[1]);
+						}
 					} else if (type == Parser.MANAGER_SVN) {
-						if (Utils.isValid(line)) name = Utils.readPackage(line);
+						if (Utils.isValid(line)) {
+							name = Utils.readPackage(line);
+						}
 					} else
 						break;
-					if (name != null && !classes.contains(name)) classes.add(name.toString());
+					if (name != null && !classes.contains(name)) {
+						classes.add(name.toString());
+					}
+
 				}
 
 				listing = null;
 				System.gc();
 
-				if (classes.size() == 0 || classes.size() > maxScattering) delete.add(commit);
+				if (classes.size() == 0 || classes.size() > maxScattering) {
+					delete.add(commit);
+				}
 
 				if (classes.size() > 0) {
-					if (hash.containsKey(classes.size())) hash.put(classes.size(), hash.get(classes.size()) + 1);
-					else hash.put(classes.size(), 1);
+					if (hash.containsKey(classes.size())) {
+						hash.put(classes.size(), hash.get(classes.size()) + 1);
+					} else
+						hash.put(classes.size(), 1);
 				} else
 					return;
 
-			} catch (FileNotFoundException e) {e.printStackTrace();} catch (IOException e) {e.printStackTrace();}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 
 		System.gc();
 
-		Iterator<Integer> iterator = hash.keySet().iterator();
-
-		while (iterator.hasNext()) int key = iterator.next();
-
-		for (File file : delete) file.deleteOnExit();
+		/**
+		 * removes the scattering commits
+		 */
+		for (File file : delete) { file.deleteOnExit(); }
 
 	}
-
 
 }
