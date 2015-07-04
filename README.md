@@ -1,18 +1,9 @@
-#ModularityCheck
-**ASERG - Applied Software Engineering Research Group**
-
-**Computer Science Department - Federal University of Minas Gerais (DCC - UFMG)**
-
-##What is it?
-
 ModularityCheck is an Eclipse plug-in that supports an alternative form to understand 
 and assess package modularity based on co-change clusters, which are collections of 
 highly interrelated classes considering co-change relations. For more information click
 [here](http://aserg.labsoft.dcc.ufmg.br/modularitycheck/).
 
-##Use it
-
-###Install  
+#Install  
 
 1. In Eclipse, click on Help > Install New Software…
 2. Click Add….
@@ -29,7 +20,7 @@ highly interrelated classes considering co-change relations. For more informatio
 11. Click Restart Now to make Eclipse restart itself.
 12. Done. ModularityCheck is now ready for use.
 
-###Enable plugin view
+#Enable plugin view
 To enable the ModularityCheck view:
 
 1. In Eclipse, click on Window > Show View > Other
