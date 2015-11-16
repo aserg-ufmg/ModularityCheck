@@ -115,7 +115,8 @@ public class ConfigurationsDialog {
 				| SWT.OK | SWT.APPLICATION_MODAL);
 
 		dialogShell.setText("Configure your repository");
-		dialogShell.setSize(475, 291);
+//		dialogShell.setSize(475, 291);
+		dialogShell.setSize(505, 341);
 		dialogShell.setLayout(new FillLayout(SWT.HORIZONTAL));
 
 		Rectangle screenSize = dialog.getPrimaryMonitor().getBounds();

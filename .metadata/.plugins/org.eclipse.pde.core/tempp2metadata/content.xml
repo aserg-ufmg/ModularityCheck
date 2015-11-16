@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/C:/Users/Luciana/Documents/GitHub/ModularityCheck/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1446936128816'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <units size='4'>
+    <unit id='modularitycheck' version='1.0.0.2---7735C553G73A5'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='modularitycheck'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='modularitycheck' version='1.0.0.2---7735C553G73A5'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='ModularityFeatureNew.feature.group' range='[1.0.0.201511072041,1.0.0.201511072041]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='ModularityFeatureNew.feature.jar' version='1.0.0.201511072041'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='ModularityFeatureNew'/>
+        <property name='org.eclipse.equinox.p2.description' value='ModularityCheck is a tool that implements an approach for assessing modularity using co-change clusters.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://java.llp.dcc.ufmg.br/modularitycheck/'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='ModularityFeatureNew.feature.jar' version='1.0.0.201511072041'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='ModularityFeatureNew' version='1.0.0.201511072041'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='ModularityFeatureNew' version='1.0.0.201511072041'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://java.llp.dcc.ufmg.br/modularitycheck/' url='http://java.llp.dcc.ufmg.br/modularitycheck/'>
+          More information at http://java.llp.dcc.ufmg.br/modularitycheck/
+        </license>
+      </licenses>
+      <copyright uri='http://java.llp.dcc.ufmg.br/modularitycheck/' url='http://java.llp.dcc.ufmg.br/modularitycheck/'>
+        More information at http://java.llp.dcc.ufmg.br/modularitycheck/
+      </copyright>
+    </unit>
+    <unit id='br.ufmg.dcc.labsoft.aserg.modularitycheck' version='1.0.1.201511072041'>
+      <update id='br.ufmg.dcc.labsoft.aserg.modularitycheck' range='[0.0.0,1.0.1.201511072041)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='Modularitycheck'/>
+      </properties>
+      <provides size='25'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='br.ufmg.dcc.labsoft.aserg.modularitycheck' version='1.0.1.201511072041'/>
+        <provided namespace='osgi.bundle' name='br.ufmg.dcc.labsoft.aserg.modularitycheck' version='1.0.1.201511072041'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.model.bug' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.model.bug.linker' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.model.bug.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.model.source' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.model.source.git' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.model.source.svn' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.bugparser.util' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.distribution.control' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.distribution.control.metrics' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.distribution.map' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.data.clustering.chameleon' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.enhancement' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.metrics' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.processing.data' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.processing.data.clustering.chameleon' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.processing.data.clustering.pam' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.enhancements.properties.util' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.views' version='0.0.0'/>
+        <provided namespace='java.package' name='br.ufmg.dcc.labsoft.aserg.modularitycheck.views.tables' version='0.0.0'/>
+        <provided namespace='java.package' name='modularitycheck' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.wb.swt' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='br.ufmg.dcc.labsoft.aserg.modularitycheck' version='1.0.1.201511072041'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: br.ufmg.dcc.labsoft.aserg.modularitycheck;singleton:=true&#xA;Bundle-Version: 1.0.1.201511072041
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='ModularityFeatureNew.feature.group' version='1.0.0.201511072041' singleton='false'>
+      <update id='ModularityFeatureNew.feature.group' range='[0.0.0,1.0.0.201511072041)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='ModularityFeatureNew'/>
+        <property name='org.eclipse.equinox.p2.description' value='ModularityCheck is a tool that implements an approach for assessing modularity using co-change clusters.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://java.llp.dcc.ufmg.br/modularitycheck/'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='ModularityFeatureNew.feature.group' version='1.0.0.201511072041'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='br.ufmg.dcc.labsoft.aserg.modularitycheck' range='[1.0.1.201511072041,1.0.1.201511072041]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='ModularityFeatureNew.feature.jar' range='[1.0.0.201511072041,1.0.0.201511072041]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://java.llp.dcc.ufmg.br/modularitycheck/' url='http://java.llp.dcc.ufmg.br/modularitycheck/'>
+          More information at http://java.llp.dcc.ufmg.br/modularitycheck/
+        </license>
+      </licenses>
+      <copyright uri='http://java.llp.dcc.ufmg.br/modularitycheck/' url='http://java.llp.dcc.ufmg.br/modularitycheck/'>
+        More information at http://java.llp.dcc.ufmg.br/modularitycheck/
+      </copyright>
+    </unit>
+  </units>
+</repository>
